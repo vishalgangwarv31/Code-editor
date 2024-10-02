@@ -1,0 +1,168 @@
+/* General styling */
+body, html, #root, .app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #1e1e1e;
+  font-family: 'Roboto', sans-serif;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  color: #ffffff;
+}
+
+.files-section {
+  background: #252526;
+  padding: 10px;
+  width: 250px;
+  overflow: auto;
+  border-right: 1px solid #333;
+  transition: all 0.3s ease;
+}
+
+.files-section:hover {
+  background: #323233;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  margin: 5px 0;
+  background: #3a3a3a;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.file-item:hover {
+  background: #4b4b4b;
+}
+
+.file-item button {
+  background: #f14e32;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.file-item button:hover {
+  background: #ff6347;
+}
+
+.right-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #333;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.header select, .header button {
+  margin: 0 10px;
+}
+
+.header select {
+  background: #444;
+  color: white;
+  border: 1px solid #555;
+  padding: 5px;
+  border-radius: 4px;
+  transition: border 0.3s;
+}
+
+.header select:hover {
+  border: 1px solid #777;
+}
+
+.header button {
+  background: #007acc;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.header button:hover {
+  background: #005f9e;
+}
+
+.code-editor {
+  flex: 1;
+  background: #1e1e1e;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.code-editor textarea {
+  width: 100%;
+  height: 100%;
+  background: #252526;
+  border: none;
+  color: #9cdcfe;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: inset 0 0 10px #000;
+  resize: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.code-editor textarea:focus {
+  outline: none;
+  border: 1px solid #007acc;
+}
+
+.output-section {
+  background: #252526;
+  padding: 15px; /* Increased padding for more space */
+  border-radius: 6px;
+  border: 1px solid #333;
+  color: #b4b4b4;
+  overflow: auto;
+  max-height: 300px; /* Increase the maximum height */
+  margin-top: 15px; /* Spacing above the output section */
+  font-size: 16px; /* Increase font size for better readability */
+}
+
+.output-section h3 {
+  margin: 0 0 10px 0; /* Adjusted margin for header */
+  padding: 0;
+  font-size: 20px; /* Increased font size for title */
+  color: #c586c0;
+}
+
+.output-section pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+  font-size: 16px; /* Maintain font size consistency */
+  line-height: 1.4; /* Improved line spacing */
+}
+
+.output-section::-webkit-scrollbar {
+  width: 8px; /* Slightly wider scrollbar */
+}
+
+.output-section::-webkit-scrollbar-thumb {
+  background-color: #007acc;
+  border-radius: 4px;
+}
